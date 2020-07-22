@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+button {
+  color: red;
+  border: 2px solid blue;
+  height: 30px;
+  width: 200px;
+  border-radius: 7px
+}
