@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.clock-screen {
+  padding-bottom: 40px;
+}
+
+button {
+  color: red;
+  border: 2px solid blue;
+  height: 30px;
+  width: 200px;
+  border-radius: 7px;
+}
