@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  margin-top: 100px;
+}
+
+.clock-screen {
+  border: 3px solid black;
+  width: 100px;
+  text-align: center;
+  height: 50%;
+}
+
+.btn {
+  background-color: #39ff14;
+  border: 3px solid black;
+  width: 30px;
+  height: 50%;
+}

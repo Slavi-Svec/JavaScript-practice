@@ -8,5 +8,7 @@ const newTime = ()  => {
   screen.textContent = h + ':' + m + ':' + s
   }
 
-  console.log( setInterval(newTime, 1000))
-
+  const btn = document.getElementsByClassName ('btn')[0]
+  btn.addEventListener('click', () => {
+    setInterval(newTime, 1000)
+  })
