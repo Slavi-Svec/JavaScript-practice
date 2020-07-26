@@ -1,21 +1,23 @@
-const btn = document.getElementsByClassName ('btn')[0]
+const value = document.getElementsByClassName('palindrome-in')[0].value
+const textOut = document.getElementsByClassName('palindrome-out')[0]
+const btn = document.getElementsByClassName('btn')[0]
+
+function palindrome(str) {
+   str = str.replace(/\W/g, '').toLowerCase();
+   return str === str.split('').reverse().join('');
+}
+
 btn.addEventListener('click', () => {
-console.log('hello')
+  'use strict';
+  if (palindrome(value)) {
+    textOut.innerHTML = "yes yes yes... you got a palindrome"
+  } else {
+    textOut.innerHTML = "NO PALINDROME... no palindrome for you";
+    console.log(textOut)
+  }
 })
 
 
 
 
-
-
-function palindrome(str) {
-  const filteredString = str.toLowerCase().replace(/[^A-Za-z0-9]/g, '')
-
-  if (filteredString === filteredString.split("").reverse().join("")) {
-    return true
-  }
-
-  return false
-}
-
-console.log(palindrome("_eye"));
+// var notification = document.getElementById("notification");
