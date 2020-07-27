@@ -8,16 +8,10 @@ const palindrome = (str) => {
 }
 
 btn.addEventListener('click', () => {
-
   if (palindrome(value)) {
     textOut.innerHTML = "yes yes yes... you got a palindrome"
   } else {
     textOut.innerHTML = "NO PALINDROME... no palindrome for you";
-    console.log(textOut)
   }
 })
 
-
-
-
-// var notification = document.getElementById("notification");

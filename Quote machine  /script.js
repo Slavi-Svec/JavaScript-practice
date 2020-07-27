@@ -6,6 +6,7 @@ btn.addEventListener('click', () => {
       return response.json();
     })
     .then((data) => {
+      console.log(data)
       const totalNumberQuotes = data.quotes.length
       const quote = data.quotes[Math.floor(Math.random() * totalNumberQuotes) + 1].quote
       document.getElementsByClassName("quotes")[0].textContent = quote;
