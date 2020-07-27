@@ -47,7 +47,7 @@ input[type=text]:focus {
   box-shadow: 0 0 15px paleturquoise;
 }
 
-.message-out {
+.number-out {
   margin: 0.5rem 0;
   color: paleturquoise;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
