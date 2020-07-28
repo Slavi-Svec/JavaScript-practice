@@ -4,7 +4,9 @@ const btn = document.getElementsByClassName('btn')[0]
 const romanize = (num) => {
 const romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
 const  numbers = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ]
-  let  romanConverted = '', dec, div
+  let  romanConverted = ''
+  let dec = 0
+  let div = 0
 
    for (let i = 0; i < numbers.length; i++) {
      dec = numbers[i]
@@ -17,13 +19,12 @@ const  numbers = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ]
   }
   return romanConverted
 }
-// console.log(romanize(22))
 
 btn.addEventListener('click', () => {
-  const value = document.getElementsByClassName('number-in')[0].value
-  const isRomanized = romanize(value)
-
-  isRomanized
-    ? numOut.innerHTML = romanize(textInput)
-    : numOut.innerHTML = 'NO PALINDROME... no palindrome for you'
+  let value = Number(document.getElementsByClassName('number-in')[0].value)
+  if (Number.isInteger(value)) {
+    numOut.innerHTML = romanize(value)
+  } else {
+    numOut.innerHTML = 'must be a nmber :('
+  }
 })
