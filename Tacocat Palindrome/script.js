@@ -1,5 +1,6 @@
-const images = ["taco-a.png", "taco-b.png"]
-const image = document.getElementById("image")
+let interval = 0
+const images = ['taco-a.png', 'taco-b.png']
+const image = document.getElementById('image')
 let currentPos = 0
 
 const changeImage = () => {
@@ -8,8 +9,6 @@ const changeImage = () => {
 
   image.src = images[currentPos]
 }
-setInterval(changeImage, 300)
-
 
 const textOut = document.getElementsByClassName('palindrome-out')[0]
 const btn = document.getElementsByClassName('btn')[0]
@@ -23,9 +22,13 @@ btn.addEventListener('click', () => {
   const value = document.getElementsByClassName('palindrome-in')[0].value
   const isPalindrome = palindrome(value)
 
-  isPalindrome
-    ? textOut.innerHTML = 'yes yes yes... you got a palindrome!'
-    : textOut.innerHTML = 'NO PALINDROME... no palindrome for you!'
+  if (isPalindrome) {
+    textOut.innerHTML = 'yes yes yes... you got a palindrome!'
+    interval = setInterval(changeImage, 300)
+  } else {
+    textOut.innerHTML = 'NO PALINDROME... no palindrome for you!'
+    clearTimeout(interval);
+  }
 })
 
 
