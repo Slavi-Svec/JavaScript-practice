@@ -1,18 +1,5 @@
-// const numIn = document.getElementsByClassName('number-in')[0]
-// const numOut = document.getElementsByClassName('number-out')[0]
-// const btn = document.getElementsByClassName('btn')[0]
-
-// btn.addEventListener('click', () => {
-//    let msgContent = msgIn.value
-
-//    if (msgContent === '') {
-//     alert('please Enter A Message')
-//       } else {
-//     msgOut.innerHTML = msgContent
-//     msgIn.value = ''
-//    }
-// })
-
+const numOut = document.getElementsByClassName('number-out')[0]
+const btn = document.getElementsByClassName('btn')[0]
 
 const romanize = (num) => {
 const romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
@@ -30,6 +17,13 @@ const  numbers = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ]
   }
   return romanConverted
 }
+// console.log(romanize(22))
 
+btn.addEventListener('click', () => {
+  const value = document.getElementsByClassName('number-in')[0].value
+  const isRomanized = romanize(value)
 
-console.log(romanize(1000000))
+  isRomanized
+    ? numOut.innerHTML = romanize(textInput)
+    : numOut.innerHTML = 'NO PALINDROME... no palindrome for you'
+})
