@@ -1,5 +1,7 @@
 const numOut = document.getElementsByClassName('number-out')[0]
 const btn = document.getElementsByClassName('btn')[0]
+const emoji = String.fromCodePoint(0x1F621)
+console.log(emoji)
 
 const romanize = (num) => {
 const romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
@@ -25,6 +27,6 @@ btn.addEventListener('click', () => {
   if (Number.isInteger(value)) {
     numOut.innerHTML = romanize(value)
   } else {
-    numOut.innerHTML = 'must be a nmber :('
+    numOut.innerHTML = 'must be a number'.concat(emoji)
   }
 })

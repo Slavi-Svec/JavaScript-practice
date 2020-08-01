@@ -12,9 +12,10 @@ body {
 .container {
   text-align: center;
   padding: 4rem;
-  border-radius: 8px;
+  border-radius: 9px;
   background: palegoldenrod;
-  flex: 0 0 60%;
+  /* flex: 0 0 460px; */
+  /* padding-bottom: 430px; */
 }
 button {
   display: block;
