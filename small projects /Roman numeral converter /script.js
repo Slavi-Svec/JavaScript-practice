@@ -1,7 +1,6 @@
 const numOut = document.getElementsByClassName('number-out')[0]
 const btn = document.getElementsByClassName('btn')[0]
 const emoji = String.fromCodePoint(0x1F621)
-console.log(emoji)
 
 const romanize = (num) => {
 const romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ]
@@ -24,9 +23,12 @@ const  numbers = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ]
 
 btn.addEventListener('click', () => {
   let value = Number(document.getElementsByClassName('number-in')[0].value)
-  if (Number.isInteger(value)) {
+  if (Number.isInteger(value) && value<=4999 && value>0) {
     numOut.innerHTML = romanize(value)
   } else {
-    numOut.innerHTML = 'must be a number'.concat(emoji)
+    numOut.innerHTML = 'can only convert' + '<br>' + 'a <u>number</u>' + '<br>' + 'up to 4999'.concat(emoji)
   }
 })
+
+
+
