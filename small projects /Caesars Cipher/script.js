@@ -1,19 +1,23 @@
-const textOut = document.getElementsByClassName('palindrome-out')[0]
-const btn = document.getElementsByClassName('btn')[0]
-
-const palindrome = (str) => {
-   str = str.replace(/\W/g, '').toLowerCase()
-   return str === str.split('').reverse().join('')
+function rot13(str) {
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  return str
+    .split('')
+    .map(char => {
+      const pos = alphabet.indexOf(char);
+      return pos >= 0 ? alphabet[(pos + 13) % 26] : char;
+    })
+    .join('');
 }
 
-btn.addEventListener('click', () => {
-  const value = document.getElementsByClassName('palindrome-in')[0].value
-  const isPalindrome = palindrome(value)
+  console.log(rot13(''))
 
-  isPalindrome
-    ? textOut.innerHTML = 'yes yes yes... you got a palindrome'
-    : textOut.innerHTML = 'NO PALINDROME... no palindrome for you'
-})
+function decodeRot13(){
+  let input = document.getElementsByClassName('word-in')[0]
+  let result = document.getElementsByClassName("word-out")[0]
+  result.textContent = rot13(input.value)
+}
+
+
 
 
 
