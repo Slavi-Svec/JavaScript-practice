@@ -1,32 +1,37 @@
 body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: paleturquoise;
-  font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 18px;
+  background-image: url('cipher.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: robot reavers;
   font-weight: 400;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-  text-align: center;
-  padding: 4rem;
-  border-radius: 8px;
-  background: palegoldenrod;
-  flex: 0 0 60%;
+h1 {
+  margin-top: -20px;
+
 }
-button {
-  display: block;
-  font-size: 2rem;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  color: black;
-  background: paleturquoise;
-  border-radius: 8px;
-  border: 3px solid paleturquoise;
-  outline: none;
-  text-transform: capitalize;
+ .container {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #0FBC63;
+  opacity: 0.8;
+  flex: 0 0 50%;
+  width: 630px;
+  box-shadow: 0 0 15px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 
 }
 button:hover {
@@ -35,20 +40,31 @@ button:hover {
   color: white;
 }
 input[type=text] {
-  padding: 0.5rem;
-  margin: rem;
+  padding: 8px;
+  width: 600px;
   border-radius: 5px;
   font-size: 1.5rem;
   border: 3px solid paleturquoise;
   outline: none;
+  text-align: center;
+  font-family: robot reavers;
 }
 
 input[type=text]:focus {
   box-shadow: 0 0 15px paleturquoise;
 }
 
-.palindrome-out {
-  margin: 0.5rem 0;
-  color: paleturquoise;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+.word-out {
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: 3px solid paleturquoise;
+  outline: none;
+  width: 580px;
+  height: 28px;
+  margin: 10px 0 0 0; 
+  color:black;
+  /* text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;  */
+
 }
