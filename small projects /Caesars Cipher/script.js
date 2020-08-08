@@ -1,14 +1,12 @@
 const rot13 = (str) => {
-  let decoded = ""
+  let encoded = ""
   const charCheck = (char) => char < 65 ? char : char % 26 + 65
   for(let i = 0; i < str.length; i++) {
-    var x = str.charCodeAt(i)
-    decoded += String.fromCharCode(charCheck(x))
+    let strAt = str.toUpperCase().charCodeAt(i)
+    encoded += String.fromCharCode(charCheck(strAt))
   }
-  return decoded
+  return encoded
 }
-
-console.log(rot13('serr'))
 
 const decodeRot13 = () => {
   let input = document.getElementsByClassName('word-in')[0]
