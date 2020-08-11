@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(33, 209, 192);
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+}
+
+.valid {
+  visibility: hidden;
+  color: green;
+}
+
+.invalid {
+  visibility: hidden;
+  color: red;
+}
+
+.output {
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.container {
+  height: 446px;
+  width: 220px;
+  /* margin-top: 100px; */
+  background-color: white;
+  border: 3px solid silver;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 5% 25% 1fr 10%;
+}
+
+.top i {
+  font-size: 10px;
+}
+
+.input-results {
+  grid-row: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 75%;
+  height: 40px;
+  text-align: center;
+  font-size: 23px;
+  border: 1.5px solid black;
+  background-color: 	#ffffff;
+  outline: none;
+}
+
+.blue-writing {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #6fb2fd;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  color: #3b3b3b;
+  padding: 0 10%;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.button {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  font:	#737373;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:  #e5e5e5;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(187, 186, 186)
+}
+
+.button:active {
+  cursor: pointer;
+  background-color: rgb(187, 186, 186)
+}
+
+.button.phone-button:hover {
+  background: rgba(8, 150, 8, 0.8);
+
+}
+.button.phone-button:active {
+  background: rgba(8, 150, 8, 0.8);
+
+}
+
+.button.fa-asterisk {
+  font-size: 16px;
+}
+
+.button.phone-button {
+  grid-column: 2 / 3;
+  color: white;
+  background-color: #4bd964;
+}
