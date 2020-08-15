@@ -35,7 +35,6 @@ body {
 .container {
   height: 446px;
   width: 220px;
-  /* margin-top: 100px; */
   background-color: white;
   border: 3px solid silver;
   border-radius: 20px;
@@ -65,7 +64,7 @@ body {
   background-color: 	#ffffff;
   outline: none;
 }
-
+/* 
 .blue-writing {
   margin-top: 5px;
   text-align: center;
@@ -73,7 +72,7 @@ body {
   color: #6fb2fd;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .buttons {
   grid-row: 3 / 4;
