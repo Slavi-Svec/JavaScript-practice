@@ -1,4 +1,4 @@
-* {
+*{
   padding: 0;
   margin: 0;
 }
@@ -15,20 +15,11 @@
   background-color:pink;
   position: relative;
   top: 150px;
-  animation: jump is 500ms  infinite;
+  /* animation: jump is 500ms  infinite; */
 }
-.animate {
+ .animate {
     animation: jump 500ms;
 }
-
-@keyframes jump {
-    0%{top: 150px;}
-    50%{top: 100px;}
-    70%{top: 100px;}
-    100%{top: 150px;}
-
-}
-
 #block {
   width: 20px;
   height: 20px;
@@ -39,9 +30,14 @@
   animation: block ls;
 }
 
-@keyframes block {
-    0%{left:480px;}
-    100%{left:-40px;}
-}
-
-
+@keyframes block{
+  0%{left:475px;}
+  100%{left:-25px;}
+  }
+/*
+@keyframes jump {
+  0%{top: 150px;}
+  50%{top: 100px;}
+  70%{top: 100px;}
+  100%{top: 150px;}
+}  */
