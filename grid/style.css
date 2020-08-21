@@ -1,0 +1,23 @@
+.flex-grid {
+  display: flex;
+
+}
+
+
+.col {
+  content: url("airpods-july.png");
+  flex: 1;
+  width: 200px;
+  height: 200px;
+  justify-content: space-between;
+
+  /* margin-top: 35px;
+  margin-bottom: 65px; */
+}
+
+/* .col-2 {
+  content: url("airpods-july.png");
+  flex: 1;
+  width: 200px;
+  height: 200px; */
+
