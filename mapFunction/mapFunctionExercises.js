@@ -21,8 +21,28 @@
 
 // console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
 
-function capitalizeNames(arr){
-  // your code here
-}
+// 3) Capitalize each of an array of names
 
-console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
+// function capitalizeNames(arr){
+//   return arr.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+// }
+
+// // const capitalizeNames = (arr) => newArr = arr.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+
+// console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
+
+
+// const sentenceToWordsArray = str => str.split(' ');
+// const firstLetterToUppercase = word => word.replace(word[0], word[0].toUpperCase());
+// const transformWordInArray = arr => arr.map(firstLetterToUppercase)
+// const arrayToString = arr => arr.reduce((sentence, word) => `${sentence} ${word}`);
+// const print = val => console.log(val);
+
+// const action = (function1, function2) => function2(function1);
+// const compose = arr => val => arr.reduce(action, val);
+// const algorithm = [sentenceToWordsArray, transformWordInArray, arrayToString, print];
+// const CAPITALIZE = compose(algorithm);
+
+// CAPITALIZE('the quick brown fox')
+
+
