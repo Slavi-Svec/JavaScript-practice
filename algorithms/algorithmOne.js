@@ -52,17 +52,45 @@
   // const concatenate = ('hello', 'goodbye') //=> 'hellogoodbye'
 //   const concatenate = ('hello')('goodbye') // => 'hellogoodbye'
 
-// function mergeString (a, b) {
+
+// function add(a,b) {
 //   if (arguments.length === 1) {
-//      return function(b2) {
-//        return a.concat(b2)
-//      }
+//     return function(b2) { // You could call this arg `b` as well if you like,
+//       return a - b2;      // it would shadow (hide, supercede) the one above
+//     };
 //   }
-//   return a.concat(b)
+//   return a + b;
+// }
+
+// will need to use below ||
+// function concatString (a, b) {
+//   if (arguments.length < 2) {
+//       throw new Error("This function expects at least two arguments")
+//   } else if (a === undefined) {
+//     throw new Error ("This function expects at least two arguments")
+//   } else if (arguments.length === 2) {
+//       return a.concat(b)
+//   }
 // }
 
 
-// console.log(mergeString(concatenate))
+const concatenate = (arg1, arg2) => {
+  if (!arg1) {
+    throw new Error("Please provide a valid argument");
+  }
+
+  if (!arg2) {
+    return (arg12) => {
+      return arg1 + arg12;
+    };
+  }
+
+  return arg1 + arg2;
+};
+
+console.log(concatenate('hello')('goodbye'))
+
+
 
 // ________________________________________________________________________________________________________________
 
