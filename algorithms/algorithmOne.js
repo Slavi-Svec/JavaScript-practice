@@ -74,21 +74,21 @@
 // }
 
 
-const concatenate = (arg1, arg2) => {
-  if (!arg1) {
-    throw new Error("Please provide a valid argument");
-  }
+// const concatenate = (arg1, arg2) => {
+//   if (!arg1) {
+//     throw new Error("Please provide a valid argument");
+//   }
 
-  if (!arg2) {
-    return (arg12) => {
-      return arg1 + arg12;
-    };
-  }
+//   if (!arg2) {
+//     return (arg12) => {
+//       return arg1 + arg12;
+//     };
+//   }
 
-  return arg1 + arg2;
-};
+//   return arg1 + arg2;
+// };
 
-console.log(concatenate('hello')('goodbye'))
+// console.log(concatenate('hello')('goodbye'))
 
 
 

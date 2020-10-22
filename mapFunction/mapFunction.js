@@ -1,10 +1,11 @@
-const array = [1, 2, 3, 4]
+// const array = [1, 2, 3, 4]
 // const arrayForQuestionFour = ['zero', 'one', 'two']
 
 // let newArr = []
 // for (let i = 0; i < array.length; i++) {
 //   newArr.push(array[i] * 3)
 // }
+
 // console.log(newArr)
 
 
