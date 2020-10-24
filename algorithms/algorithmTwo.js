@@ -70,7 +70,7 @@
 // })
 // return added
 
-let flatArray = [10,0,3,5,5,8]
+// let flatArray = [10,0,3,5,5,8]
 
 
 
@@ -103,28 +103,70 @@ let flatArray = [10,0,3,5,5,8]
 // .filter(movie => movie !== true)
 // .flat()
 
+// const number = (busStops) => {
+//   let oddFilter = flatArray
+//   .filter((x,index) => (index % 2 == 0))
+//   .reduce((a,b) =>  a + b)
+
+//   let evenFilter = flatArray
+//   .filter((x,index) => (index % 2))
+//   .reduce((a,b) =>  a + b)
+
+//   return oddFilter - evenFilter
+// }
+
+
+
+// console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]))
+
+// ________________________________________________________________________________________________________________
+
+// number = 10
+
+// function solution(number){
+//   for (let i = 0; i < number; i++) {
+//     if (number % 3==0 && number % 5==0) {
+//       return 'fizz buzz'
+//     } else if (number % 3 == 0) {
+//       return 'fizz'
+//     } else if (number % 5 == 0) {
+//       return 'buzz'
+//     } else {
+//       return number
+//     }
+//   }
+// }
+// console.log(solution(150))
+
+// ________________________________________________________________________________________________________________
+
+// first loop over all th numbers up intil the (number)
+// first filter out all the numbers that are divided By
+// 3,
+// 5,
+// 3 & 5
 
 
 
 
-const number = (busStops) => {
-  let oddFilter = flatArray
-  .filter((x,index) => (index % 2 == 0))
-  .reduce((a,b) =>  a + b)
 
-  let evenFilter = flatArray
-  .filter((x,index) => (index % 2))
-  .reduce((a,b) =>  a + b)
 
-  return oddFilter - evenFilter
+
+const solution = (number) => {
+  if (number <= 0 ) return 0
+
+  return [...Array(number).keys()]
+    .filter((num) => num % 3 === 0 || num % 5 === 0)
+    .reduce((a, b) =>  a + b)
 }
 
+// let arrMinusThreeAndFive = numberArray.filter((item) => !filteredArray.includes(item))
+// let newArr = arrMinusThreeAndFive.filter((num) =>  num % 3 === 0 || num % 5 === 0) // minuses numbers divisible by 3&5 from the returned array without the numbers divisible by 3,5
+// let numbersFiltered = newArr.concat(filteredArray) // merge the 2 arrays together with all the required numbers
+// return addedNumbers
+// \
 
-
-console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]))
-
-
-
+console.log(solution(10))
 
 
 
