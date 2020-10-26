@@ -22,3 +22,5 @@
 // example 2 console.log(num) console.log(index)
 
 
+
+
