@@ -207,24 +207,142 @@
 
 // console.log(likes(trumpArray))
 
-const trumpArray = ['trump', 'putin', 'truman']
+// const trumpArray = []
 
 
-const likes = (array) => {
-  if (array && !array.length) {
-    return "no one likes this"
-} else if (array.length === 1) {
-    return `${array[0]} likes this`
-} else if  (array.length === 2) {
-    return `${array[0]} and ${array[1]} like this`
-} else if  (array.length === 3) {
-    return `${array[0]}, ${array[1]} and ${array[2]} like this`
-} else  if (array.length > 3) {
-    const numberCount = array.length - 2
-    return `${array[0]}, ${array[1]} and ${numberCount} others like this`
+// const likes = (array) => {
+
+//     if (!array.length) {
+//       return "no one likes this"
+//   } else if (array.length === 1) {
+//       return `${array[0]} likes this`
+//   } else if  (array.length === 2) {
+//       return `${array[0]} and ${array[1]} like this`
+//   } else if  (array.length === 3) {
+//       return `${array[0]}, ${array[1]} and ${array[2]} like this`
+//   } else if (array.length > 3) {
+//       return `${array[0]}, ${array[1]} and ${array.length - 2} others like this`
+//   }
+// }
+
+
+
+
+// const likes = (array) => {
+
+//   if (!array.length) {
+//     return "no one likes this"
+// } else if (array.length === 1) {
+//     return `${array[0]} likes this`
+// } else if  (array.length === 2) {
+//     return `${array[0]} and ${array[1]} like this`
+// } else if  (array.length === 3) {
+//     return `${array[0]}, ${array[1]} and ${array[2]} like this`
+// } else if (array.length > 3) {
+//     return `${array[0]}, ${array[1]} and ${array.length - 2} others like this`
+// }
+// }
+
+// const array = ['Trump', 'Bush', 'Kennedy', 'Clinton', 'Raegan']
+
+// const likes = (names) => {
+//   switch(names.length) {
+//     case 0: return "no one likes this";
+//     case 1: return `${array[0]} likes this`;
+//     case 2: return `${array[0]} and ${array[1]} like this`;
+//     case 3: return `${array[0]}, ${array[1]} and ${array[2]} like this`;
+//     default: return `${array[0]}, ${array[1]} and ${array.length - 2} others like this`
+//   }
+// }
+
+// console.log(likes(array))
+
+
+
+
+
+// ________________________________________________________________________________________________________________
+
+// 6 kyu Create Phone Number
+
+ // => returns "(123) 456-7890"
+
+
+// const phone =  ([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+// const createPhoneNumber = (numbers) => {
+//   const convertToString = numbers.toString()
+//   const removeCommas = convertToString.replace(/[, ]+/g, "")
+//   const x = removeCommas.slice(0,3)
+//   const y = removeCommas.slice(3,6)
+//   const v = removeCommas.slice(6,10)
+//   return `(${x}) ${y}-${v}`
+// }
+
+// console.log(createPhoneNumber(phone))
+
+// solution refactored
+
+// const phone =  ([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+// const createPhoneNumber = (numbers) => {
+//   let n =  numbers.join('')
+//   return `(${n.slice(0,3)}) ${n.slice(3,6)}-${n.slice(6,10)}`
+// }
+
+// console.log(createPhoneNumber(phone))
+
+// ________________________________________________________________________________________________________________
+
+
+// Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+// [1] find a way to remove all the zeros from the array and store them in an const
+// [2] then pop them both to the end of the aray.
+
+// const numArray = ([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+
+// const moveZeros = (arr) => {
+//   const arrayWithZerosRemoved = arr.filter(element => ![0].includes(element))
+//   const zeros = arr.filter((num) => num === 0)
+//   return arrayWithZerosRemoved.concat(zerosTakenOutOfArray)
+
+// }
+
+// console.log(moveZeros(numArray))
+
+
+// const moveZeros = (arr) =>  arr.filter((num) => num !== 0).concat(arr.filter((num) => num === 0))
+// moveZeros = arr => arr.filter(num => num !== 0).concat(arr.filter(num => num === 0))
+
+
+// console.log(moveZeros(numArray))
+
+
+// Expected: '[1,2,1,1,3,1,0,0,0,0]', instead
+//  got:     '[1,2,0,1,0,1,0,3,0,1,0,0,0,0]'
+
+
+// abo = [false,1,0,1,2,0,1,3,"a"]
+
+// const newArrays =
+
+// console.log(newArrays)
+
+// ________________________________________________________________________________________________________________
+
+
+const duplicateCount = (text) => {
+  let c = text.match([a-zA-Z]).*(\1)
+  return c
 }
-}
+
+console.log(duplicateCount('Indivisibilities'))
 
 
-console.log(likes(trumpArray))
 
+
+
+
+
+// ________________________________________________________________________________________________________________
