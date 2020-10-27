@@ -335,23 +335,44 @@
 
 
 const duplicateCount = (text) => {
-    const filteredOutDuplicated = text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
-    const finalFilter = filteredOutDuplicated.filter((item, pos, self) =>  self.indexOf(item) == pos)
-    return (finalFilter.length)
+  return text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
+             .filter((item, pos, self) =>  self.indexOf(item) == pos).length
 }
 
+// const duplicateCount = (text) => {
+
+// return text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
+// // }
 
 
-console.log(duplicateCount("aabBcde"))
 
 
-Test.assertEquals(duplicateCount(""), 0);
-Test.assertEquals(duplicateCount("abcde"), 0);
-Test.assertEquals(duplicateCount("aabbcde"), 2);
-Test.assertEquals(duplicateCount("aabBcde"), 2,"should ignore case");
-Test.assertEquals(duplicateCount("Indivisibility"), 1)
-Test.assertEquals(duplicateCount("Indivisibilities"), 2, "characters may not be adjacent")
+// (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+// }
 
+// console.log(duplicateCount("Indivisibilities"))
+
+
+// Test.assertEquals(duplicateCount(""), 0);
+// Test.assertEquals(duplicateCount("abcde"), 0);
+// Test.assertEquals(duplicateCount("aabbcde"), 2);
+// Test.assertEquals(duplicateCount("aabBcde"), 2,"should ignore case");
+// Test.assertEquals(duplicateCount("Indivisibility"), 1)
+// Test.assertEquals(duplicateCount("Indivisibilities"), 2, "characters may not be adjacent")
+
+
+
+const duplicateCount = (text) => {
+    // first I filter out all letters that are not duplicates leaving ["i", "i", "i", "i", "i", "i", "s"]
+  const FilterDuplicates = text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
+    //  then i filter out the duplicates again and leave this result left over  ["i", "s"]
+  const filterAgain = FilterDuplicates.filter((item, pos, self) =>  self.indexOf(item) == pos)
+    // Then i retrun the length of the  ["i", "s"] that returns 2
+  return filterAgain.length
+
+}
+
+console.log(duplicateCount("Indivisibilities"))
 
 
 
