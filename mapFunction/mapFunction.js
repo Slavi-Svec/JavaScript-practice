@@ -22,5 +22,8 @@
 // example 2 console.log(num) console.log(index)
 
 
+// const moveZeros = (arr) => {
+//   return arr.filter(element => ![0].includes(element)).concat(arr.filter((num) => num === 0))
+// }
 
 
