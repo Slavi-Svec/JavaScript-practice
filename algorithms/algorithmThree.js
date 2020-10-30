@@ -30,3 +30,19 @@
 // __________________________________________________________________________________________________________________________________________
 
 
+// create a function that returns the character count of a string in an object like so
+// charCount('iiEebub) should return { i: 2, e: 2, b: 2, u: 1 }
+
+
+// first im going to return the string count
+// then try to return it as an object
+
+const stringCount = (str) => {
+  return str.split ('')
+}
+
+
+
+
+
+console.log(stringCount('iiEebub'))

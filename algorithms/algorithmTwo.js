@@ -334,10 +334,10 @@
 // Counting Duplicates
 
 
-const duplicateCount = (text) => {
-  return text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
-             .filter((item, pos, self) =>  self.indexOf(item) == pos).length
-}
+// const duplicateCount = (text) => {
+//   return text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
+//              .filter((item, pos, self) =>  self.indexOf(item) == pos).length
+// }
 
 // const duplicateCount = (text) => {
 
@@ -362,21 +362,78 @@ const duplicateCount = (text) => {
 
 
 
-const duplicateCount = (text) => {
-    // first I filter out all letters that are not duplicates leaving ["i", "i", "i", "i", "i", "i", "s"]
-  const FilterDuplicates = text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
-    //  then i filter out the duplicates again and leave this result left over  ["i", "s"]
-  const filterAgain = FilterDuplicates.filter((item, pos, self) =>  self.indexOf(item) == pos)
-    // Then i retrun the length of the  ["i", "s"] that returns 2
-  return filterAgain.length
+// const duplicateCount = (text) => {
+//     // first I filter out all letters that are not duplicates leaving ["i", "i", "i", "i", "i", "i", "s"]
+//   const FilterDuplicates = text.toLowerCase().split('').filter((item, pos, self) =>  self.indexOf(item) !== pos)
+//     //  then i filter out the duplicates again and leave this result left over  ["i", "s"]
+//   const filterAgain = FilterDuplicates.filter((item, pos, self) =>  self.indexOf(item) == pos)
+//     // Then i retrun the length of the  ["i", "s"] that returns 2
+//   return filterAgain.length
 
-}
+// }
 
-console.log(duplicateCount("Indivisibilities"))
-
-
+// console.log(duplicateCount("Indivisibilities"))
 
 
+// _______________________________________________________________________________________________________________
+
+// codewars 5kyu simple pig latin
+
+// const pigIt = (str) => {
+//   const firstLetter = str.split (' ').map(i => i.charAt())
+//   const lastLetter = str.split (' ').map(i => i.slice(0, -1))
+
+//   // const endString =
+
+
+  // }
+
+  // const pigIt = (str) => {
+  //   newString = str.replace(/(\S)(\S+)/, '')
+  // return newString;
+  // }
+
+
+
+//   const x = 'trump'
+//   const y = x.substring(x.length - 1, x.length)
+// console.log(y)
+
+
+// console.log(pigIt('Pig latin is cool'))
+
+
+
+
+// ________________________________________________________________________________________________________________
+
+// const positiveSum = (arr) => {
+//   const filtered = arr.filter((num) => num > 0)
+//   if (!filtered.length) {
+//     return 0
+//   } else  {
+//     return filtered.reduce((a,b) => a + b)
+//   }
+// }
+
+// const positiveSum = (arr) => {
+
+
+
+
+
+
+
+
+// console.log(positiveSum([0]))
+
+
+
+// Test.assertEquals(positiveSum([1,2,3,4,5]),15);
+// Test.assertEquals(positiveSum([1,-2,3,4,5]),13);
+// Test.assertEquals(positiveSum([]),0);
+// Test.assertEquals(positiveSum([-1,-2,-3,-4,-5]),0);
+// Test.assertEquals(positiveSum([-1,2,3,4,-5]),9);
 
 
 // ________________________________________________________________________________________________________________
