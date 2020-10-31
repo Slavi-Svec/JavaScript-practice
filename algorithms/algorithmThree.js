@@ -29,20 +29,24 @@
 
 // __________________________________________________________________________________________________________________________________________
 
-
 // create a function that returns the character count of a string in an object like so
 // charCount('iiEebub) should return { i: 2, e: 2, b: 2, u: 1 }
 
-
-// first im going to return the string count
-// then try to return it as an object
+// (1) first im going to change the string to an array s.split
+// (2)  try to map so it loops tru the string of each letter
+// (3) return the array of 'E' as the key of an object with the value of 1
+// (4) the letter doesnt exists in the object than give it the key wit the value of one.
+// (5) if key already exists in object then add value by one.
 
 const stringCount = (str) => {
-  return str.split ('')
+  const characterCount = {}
+
+  for (let char of str) {
+    characterCount[char] ?  characterCount[char]++ : characterCount[char] = 1
+  }
+  return characterCount
 }
 
 
 
-
-
-console.log(stringCount('iiEebub'))
+console.log(stringCount('EEEEEEEEBb'))
