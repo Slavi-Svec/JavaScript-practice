@@ -108,11 +108,38 @@
 
 
 // __________________________________________________________________________________________________________________________________________
-const arrayDiff = (a, b) =>  a.filter(x => !b.includes(x))
-console.log(arrayDiff([3,4], [3]))
-
-
+// const arrayDiff = (a, b) =>  a.filter(x => !b.includes(x))
+// console.log(arrayDiff([3,4], [3]))
 
 // Test.assertDeepEquals(arrayDiff([], [4,5]), [], "a was [], b was [4,5]");
 // Test.assertDeepEquals(arrayDiff([3,4], [3]), [4], "a was [3,4], b was [3]");
 // Test.assertDeepEquals(arrayDiff([1,8,2], []), [1,8,2], "a was [1,8,2], b was []");
+
+// __________________________________________________________________________________________________________________________________________
+
+// const reverseSeq = n =>  [...Array(n).keys()].reverse()
+
+// // assert.deepEqual(reverseSeq(5), [5, 4, 3, 2, 1]);
+
+// console.log(reverseSeq(5))
+
+
+//  const g = [5, 4, 3, 2, 1]
+//  console.log(g)
+
+
+// __________________________________________________________________________________________________________________________________________
+
+
+const getEvenNumbers = (numbersArray) =>  numbersArray.filter((x) =>  x % 2 === 0)
+
+
+console.log(getEvenNumbers([2,4,5,6]))
+
+
+// var arr1 = [2,4,5,6,7];
+
+// var evens = arr1.filter(function(x) {
+//    return x % 2 === 0;
+// })
+// console.log(evens);

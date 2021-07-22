@@ -41,9 +41,9 @@
 const stringCount = (str) => {
   const characterCount = {}
 
-  for (let char of str) {
+  for (let char of str) // this is how to change a string into an array
     characterCount[char] ?  characterCount[char]++ : characterCount[char] = 1
-  }
+
   return characterCount
 }
 
